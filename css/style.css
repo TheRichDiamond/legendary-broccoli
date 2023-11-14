@@ -1,0 +1,85 @@
+/* Style the body element */
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #f0f0f0;
+	margin: 0;
+	padding: 0;
+  }
+  
+  /* Style the main question box */
+  .main-question-box {
+	max-width: 800px;
+	margin: 20px auto;
+	padding: 20px;
+	border: none;
+	border-radius: 10px;
+	background-color: white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the question title */
+  .question-title {
+	text-align: center;
+	color: #333;
+	font-size: 24px;
+  }
+  
+  /* Style the answer box */
+  .main-answer-box {
+	margin: 10px 0;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+  }
+  
+  /* Style the answer title */
+  .answer-title {
+	font-size: 18px;
+	color: #666;
+  }
+  
+  /* Style the answer button box */
+  .answer-button-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  /* Style the answer buttons */
+  .answer-button-1,
+  .answer-button-2,
+  .answer-button-3,
+  .answer-button-4 {
+	margin: 0 5px;
+	background-color: rgb(6, 46, 206);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  .answer-button-1:hover,
+  .answer-button-2:hover,
+  .answer-button-3:hover,
+  .answer-button-4:hover {
+	background-color: #0056b3;
+  }
+  
+  /* Style the submit button */
+  #submit1 {
+	margin: 20px 0;
+	background-color: rgb(215, 17, 17);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  #submit1:hover {
+	background-color: #1e7e34;
+  }

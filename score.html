@@ -105,6 +105,14 @@
                 <td id="q11c"></td>
                 <td id="q11d"></td>
             </tr>
+            <tr>
+                <th>TOTAL</th>
+                <td id="totalA"></td>
+                <td id="totalB"></td>
+                <td id="totalC"></td>
+                <td id="totalD"></td>
+            </tr>
+            
         </table>
 
     </div>
@@ -113,51 +121,33 @@
     <script>
         var cache = window.sessionStorage;
 
+        var totalA = 0;
+        var totalB = 0;
+        var totalC = 0;
+        var totalD = 0;
 
         for (var i = 1; i <= 11; i++) {
-    var qia = cache.getItem("q" + i + "a");
-    var qib = cache.getItem("q" + i + "b");
-    var qic = cache.getItem("q" + i + "c");
-    var qid = cache.getItem("q" + i + "d");
+            var qia = parseInt(cache.getItem("q" + i + "a")) || 0;
+            var qib = parseInt(cache.getItem("q" + i + "b")) || 0;
+            var qic = parseInt(cache.getItem("q" + i + "c")) || 0;
+            var qid = parseInt(cache.getItem("q" + i + "d")) || 0;
 
-    document.getElementById("q" + i + "a").innerHTML = qia;
-    document.getElementById("q" + i + "b").innerHTML = qib;
-    document.getElementById("q" + i + "c").innerHTML = qic;
-    document.getElementById("q" + i + "d").innerHTML = qid;
-}
+            totalA += qia;
+            totalB += qib;
+            totalC += qic;
+            totalD += qid;
 
+            document.getElementById("q" + i + "a").innerHTML = qia;
+            document.getElementById("q" + i + "b").innerHTML = qib;
+            document.getElementById("q" + i + "c").innerHTML = qic;
+            document.getElementById("q" + i + "d").innerHTML = qid;
+        }
 
-    /*
-        var q1a = cache.getItem("q1a");
-        var q1b = cache.getItem("q1b");
-        var q1c = cache.getItem("q1c");
-        var q1d = cache.getItem("q1d");
-    
-        var q2a = cache.getItem("q2a");
-        var q2b = cache.getItem("q2b");
-        var q2c = cache.getItem("q2c");
-        var q2d = cache.getItem("q2d");
-    
-        var q3a = cache.getItem("q3a");
-        var q3b = cache.getItem("q3b");
-        var q3c = cache.getItem("q3c");
-        var q3d = cache.getItem("q3d");
-    
-        document.getElementById("q1a").innerHTML = q1a;
-        document.getElementById("q1b").innerHTML = q1b;
-        document.getElementById("q1c").innerHTML = q1c;
-        document.getElementById("q1d").innerHTML = q1d;
-    
-        document.getElementById("q2a").innerHTML = q2a;
-        document.getElementById("q2b").innerHTML = q2b;
-        document.getElementById("q2c").innerHTML = q2c;
-        document.getElementById("q2d").innerHTML = q2d;
-    
-        document.getElementById("q3a").innerHTML = q3a;
-        document.getElementById("q3b").innerHTML = q3b;
-        document.getElementById("q3c").innerHTML = q3c;
-        document.getElementById("q3d").innerHTML = q3d;
-        */
+        document.getElementById("totalA").innerHTML = totalA;
+        document.getElementById("totalB").innerHTML = totalB;
+        document.getElementById("totalC").innerHTML = totalC;
+        document.getElementById("totalD").innerHTML = totalD;
+
     </script>
     
 

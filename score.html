@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="author" content="Patrick Saint-Louis" />
+    <meta name="author" content="Team 4" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="img/icon/icon-apps-svgrepo.svg" sizes="any" type="image/svg+xml" />
-    <title>Well-Being Agency|Home|Well-Being Services for Companies and Individuals</title>
+    <title>Score </title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/style.css" rel="stylesheet" />
     <script type="text/javascript" src="js/main.js"></script>
@@ -49,76 +49,117 @@
                 <td id="q3c"></td>
                 <td id="q3d"></td>
             </tr>
+            <tr>
+                <th>4</th>
+                <td id="q4a"></td>
+                <td id="q4b"></td>
+                <td id="q4c"></td>
+                <td id="q4d"></td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td id="q5a"></td>
+                <td id="q5b"></td>
+                <td id="q5c"></td>
+                <td id="q5d"></td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td id="q6a"></td>
+                <td id="q6b"></td>
+                <td id="q6c"></td>
+                <td id="q6d"></td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td id="q7a"></td>
+                <td id="q7b"></td>
+                <td id="q7c"></td>
+                <td id="q7d"></td>
+            </tr>
+            <tr>
+                <th>8</th>
+                <td id="q8a"></td>
+                <td id="q8b"></td>
+                <td id="q8c"></td>
+                <td id="q8d"></td>
+            </tr>
+            <tr>
+                <th>9</th>
+                <td id="q9a"></td>
+                <td id="q9b"></td>
+                <td id="q9c"></td>
+                <td id="q9d"></td>
+            </tr>
+            <tr>
+                <th>10</th>
+                <td id="q10a"></td>
+                <td id="q10b"></td>
+                <td id="q10c"></td>
+                <td id="q10d"></td>
+            </tr>
+            <tr>
+                <th>11</th>
+                <td id="q11a"></td>
+                <td id="q11b"></td>
+                <td id="q11c"></td>
+                <td id="q11d"></td>
+            </tr>
         </table>
 
     </div>
 
 
     <script>
-
         var cache = window.sessionStorage;
+
+
+        for (var i = 1; i <= 11; i++) {
+    var qia = cache.getItem("q" + i + "a");
+    var qib = cache.getItem("q" + i + "b");
+    var qic = cache.getItem("q" + i + "c");
+    var qid = cache.getItem("q" + i + "d");
+
+    document.getElementById("q" + i + "a").innerHTML = qia;
+    document.getElementById("q" + i + "b").innerHTML = qib;
+    document.getElementById("q" + i + "c").innerHTML = qic;
+    document.getElementById("q" + i + "d").innerHTML = qid;
+}
+
+
+    /*
         var q1a = cache.getItem("q1a");
         var q1b = cache.getItem("q1b");
         var q1c = cache.getItem("q1c");
         var q1d = cache.getItem("q1d");
-
+    
         var q2a = cache.getItem("q2a");
         var q2b = cache.getItem("q2b");
         var q2c = cache.getItem("q2c");
         var q2d = cache.getItem("q2d");
-
-        var q2a = cache.getItem("q3a");
-        var q2b = cache.getItem("q3b");
-        var q2c = cache.getItem("q3c");
-        var q2d = cache.getItem("q3d");
-        /*cache.removeItem("key1");
-        console.log("Saved data: " + cache.getItem("key1"));*/
-
-
-        var msg1 = document.getElementById("q1a");
-        msg1.innerHTML = q1a;
-
-        var msg2 = document.getElementById("q1b");
-        msg2.innerHTML = q1b;
-
-        var msg3 = document.getElementById("q1c");
-        msg3.innerHTML = q1c;
-
-        var msg4 = document.getElementById("q1d");
-        msg4.innerHTML = q1d;
-
-
-        var msg1 = document.getElementById("q2a");
-        msg1.innerHTML = q2a;
-
-        var msg2 = document.getElementById("q2b");
-        msg2.innerHTML = q2b;
-
-        var msg3 = document.getElementById("q2c");
-        msg3.innerHTML = q2c;
-
-        var msg4 = document.getElementById("q2d");
-        msg4.innerHTML = q2d;
-
-
-        var msg1 = document.getElementById("q3a");
-        msg1.innerHTML = q3a;
-
-        var msg2 = document.getElementById("q3b");
-        msg2.innerHTML = q3b;
-
-        var msg3 = document.getElementById("q3c");
-        msg3.innerHTML = q3c;
-
-        var msg4 = document.getElementById("q3d");
-        msg4.innerHTML = q3d;
-        
-
-
-
-
-
+    
+        var q3a = cache.getItem("q3a");
+        var q3b = cache.getItem("q3b");
+        var q3c = cache.getItem("q3c");
+        var q3d = cache.getItem("q3d");
+    
+        document.getElementById("q1a").innerHTML = q1a;
+        document.getElementById("q1b").innerHTML = q1b;
+        document.getElementById("q1c").innerHTML = q1c;
+        document.getElementById("q1d").innerHTML = q1d;
+    
+        document.getElementById("q2a").innerHTML = q2a;
+        document.getElementById("q2b").innerHTML = q2b;
+        document.getElementById("q2c").innerHTML = q2c;
+        document.getElementById("q2d").innerHTML = q2d;
+    
+        document.getElementById("q3a").innerHTML = q3a;
+        document.getElementById("q3b").innerHTML = q3b;
+        document.getElementById("q3c").innerHTML = q3c;
+        document.getElementById("q3d").innerHTML = q3d;
+        */
     </script>
+    
 
 </body>
 

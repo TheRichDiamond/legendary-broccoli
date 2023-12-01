@@ -206,7 +206,7 @@
 
 <body>
     <!--Question 2-->
-    <form action="" method="" onsubmit="return calculateScore()">
+    <form action="" method="" onsubmit="return validateForm() && calculateScore()">
         <div class="main-question-box">
             <!-- Question 2 Title -->
             <div class="question-title">
@@ -328,6 +328,24 @@
         function validateOrder(button) {
 
         }
+
+        function validateForm() {
+    // Check if any option is selected for each question
+    var isASelected = document.querySelector('input[name="aa"]:checked');
+    var isBSelected = document.querySelector('input[name="ab"]:checked');
+    var isCSelected = document.querySelector('input[name="ac"]:checked');
+    var isDSelected = document.querySelector('input[name="ad"]:checked');
+
+    // If not, display an alert and prevent form submission
+    if (!isASelected || !isBSelected || !isCSelected || !isDSelected) {
+        alert("Please select an option for each question.");
+        return false;
+    }
+
+    // If all questions have a selected option, allow form submission
+    return true;
+}
+
 
         function calculateScore() {
             var a, b, c, d;

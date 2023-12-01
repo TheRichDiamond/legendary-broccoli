@@ -115,11 +115,10 @@
 
 
         <div style="height: 20px;"></div> <!-- Spacer -->
-        
-        <div>a. Orange</div>
-        <div>b. Green</div>
-        <div>c. Blue</div>
-        <div>d. Gold</div>
+
+        <p id="highestTotal1"></p>
+        <p id="highestTotal2"></p>
+
 
         <button onclick="location.href='question1.html'">Retake Quiz</button>
 
@@ -156,6 +155,61 @@
         document.getElementById("totalC").innerHTML = totalC;
         document.getElementById("totalD").innerHTML = totalD;
 
+
+        // Create an array of objects where each object represents a category and its total
+        var totals = [
+            { category: 'A', total: totalA },
+            { category: 'B', total: totalB },
+            { category: 'C', total: totalC },
+            { category: 'D', total: totalD }
+        ];
+
+        // Sort the array in descending order based on the total
+        totals.sort(function(a, b) {
+            return b.total - a.total;
+        });
+
+        // Get the first two elements from the sorted array
+        var highestTotals = totals.slice(0, 2);
+
+        // Display the categories and their totals in the HTML elements
+        document.getElementById("highestTotal1").innerHTML = "Highest total 1: Category " + highestTotals[0].category + " with " + highestTotals[0].total;
+        document.getElementById("highestTotal2").innerHTML = "Highest total 2: Category " + highestTotals[1].category + " with " + highestTotals[1].total;
+
+
+
+        // Display the categories and their totals in the HTML elements
+        for (let i = 0; i < highestTotals.length; i++) {
+            let imageTag = '';
+            if (highestTotals[i].category === 'A') {
+                imageTag = '<img src="imagesss/Orange.png" alt="Blue Image" width="600" height="500">';
+            } else if (highestTotals[i].category === 'B') {
+                imageTag = '<img src="imagesss/Green.png" alt="Red Image" width="600" height="500">';
+            } else if (highestTotals[i].category === 'C') {
+                imageTag = '<img src="imagesss/Blue.png" alt="Green Image" width="600" height="500">';
+            } else if (highestTotals[i].category === 'D') {
+                imageTag = '<img src="imagesss/Gold.png" alt="Orange Image" width="600" height="500">';
+            }
+            document.getElementById("highestTotal" + (i + 1)).innerHTML = "Highest total " + (i + 1) + ": Category " + highestTotals[i].category + " with " + highestTotals[i].total + imageTag;
+        }
+
+
+
+
+/*
+// Display the categories and their totals in the HTML elements
+if (highestTotals[0].category === 'A') {
+    document.getElementById("highestTotal1").innerHTML = "Highest total 1: Category " + highestTotals[0].category + " with " + highestTotals[0].total + '<img src="imagesss/Blue.png" alt="Orange Image">';
+} else {
+    document.getElementById("highestTotal1").innerHTML = "Highest total 1: Category " + highestTotals[0].category + " with " + highestTotals[0].total;
+}
+
+if (highestTotals[1].category === 'A') {
+    document.getElementById("highestTotal2").innerHTML = "Highest total 2: Category " + highestTotals[1].category + " with " + highestTotals[1].total + '<img src="imagesss/Blue.png" alt="Orange Image">';
+} else {
+    document.getElementById("highestTotal2").innerHTML = "Highest total 2: Category " + highestTotals[1].category + " with " + highestTotals[1].total;
+}
+*/
 
     </script>
     
